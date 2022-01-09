@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Q15824 {
 //너 봄에는 캡사이신이 맛있단다
+	public void mal() {
+		System.out.println("hi");
+	}
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -24,9 +27,13 @@ public class Q15824 {
 //		for(int i=0; i<32;i++) {
 //			pow = (pow*=2)%mod;
 //		}	
-		System.out.println(pow);
+
 		long min =294967268;
 		long max =-1;
+		long pain=0;
+//		System.out.println(scoville[0]);
+//		System.out.println(scoville[1]);
+//		System.out.println(scoville[2]);
 		
 		
 		for(int i=0; i<scoville.length; i++){
@@ -34,26 +41,26 @@ public class Q15824 {
 		        for(int k=j+1; k<scoville.length; k++) {
 		            // 중복 배제		        			        	
 		        	long [] cur = {scoville[i], scoville[j], scoville[k]};
-		        	result=cur;		        	
+
+		    		for(int m=0;i<cur.length;i++) {
+		    			min =294967268;
+		    			max =-1;
+		    			cur[m]= cur[m]%mod;
+		    			if(cur[m]>max) {
+		    	    		max=cur[m];
+		    	    	}
+		    	    	if(cur[m]<min){
+		    	    		min=cur[m];
+		    	    	}		    	    	
+		    		}
+		    		pain = pain%mod+max-min;
 		        }
 		    }
 		}
-		long pain=0;
-		for(int i=0;i<result.length;i++) {
-			min =294967268;
-			max =-1;
-			result[i]= result[i]%mod;
-			if(result[i]>max) {
-	    		max=result[i];
-	    	}
-	    	if(result[i]<min){
-	    		min=result[i];
-	    	}
-
-	    	pain += max-min;
-		}
 		System.out.println(pain%mod);
 		
+
+
 		
 		
 
