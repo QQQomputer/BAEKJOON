@@ -2,7 +2,7 @@ package com.bronze.s1;
 
 import java.util.Scanner;
 
-public class Lab {
+public class Main {
 
     public static void main(String args[]) {
 
@@ -11,7 +11,7 @@ public class Lab {
 		String str = sc.next();
 		long sum = 0;
 		for (int i = 0; i < n; i++) {
-			sum += ((str.charAt(i) - 96l) * Math.pow(31l, i)) % 1234567891l;
+			sum += ((long)(str.charAt(i) - 96l) * (long)Math.pow(31l, i)) % 1234567891l;
 		}
 		System.out.println(sum);
 		sc.close();
