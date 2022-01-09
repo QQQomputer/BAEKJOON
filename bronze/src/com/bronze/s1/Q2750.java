@@ -10,9 +10,6 @@ public class Q2750 {
 		
 		int s = sc.nextInt();
 		int [] box = new int[s];
-		int min = 1001;
-		int max = -1000;
-		int [] result = new int[box.length];
 		
 		for(int i=0;i<box.length;i++) {
 			box[i]=0;
@@ -26,8 +23,7 @@ public class Q2750 {
 					box[j+1]=cur;
 				}				
 			}			
-		}
-		 
+		}		 
 		for(int i=0;i<box.length;i++) {
 			System.out.println(box[i]);
 		}		
