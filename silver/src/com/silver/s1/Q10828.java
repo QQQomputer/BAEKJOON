@@ -1,19 +1,24 @@
 package com.silver.s1;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class Q10828 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int input = sc.nextInt();
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // ¼±¾ð
+		
+		int input = Integer.parseInt(br.readLine());
 		int [] room = new int[input];
 		int idx =0;
 		
 		for(int i=0;i<room.length;i++) {
-			String str = sc.next();			
+			String str = br.readLine();	
+			
 			if(str.equals("push")) {
-				int a= sc.nextInt();				
+				int a= Integer.parseInt(br.readLine());				
 				room[idx]=a;
 				idx++;
 			}else if(str.equals("pop")) {
