@@ -1,24 +1,22 @@
 package com.silver.s1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
+import java.util.Scanner;
 
 public class Q10828 {
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 識情
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in); // 識情
 		
-		int input = Integer.parseInt(br.readLine());
+		int input = sc.nextInt();
 		int [] room = new int[input];
 		int idx =0;
-		
+
 		for(int i=0;i<room.length;i++) {
-			String str = br.readLine();	
+			String str = sc.nextLine().trim();
 			
-			if(str.equals("push")) {
-				int a= Integer.parseInt(br.readLine());				
+
+			if(str.substring(0, 3).equals("push")) {
+				int a= Integer.parseInt(str.substring(5));				
 				room[idx]=a;
 				idx++;
 			}else if(str.equals("pop")) {
@@ -27,7 +25,6 @@ public class Q10828 {
 					System.out.println("-1");
 				}else {
 					System.out.println(room[idx-1]);
-					room[idx-1]=0;
 					idx--;
 				}
 				if(idx<0) {
