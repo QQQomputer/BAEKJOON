@@ -10,12 +10,8 @@ public class Q10951 {
 		int a;
 		int b;
 		while(sc.hasNextInt()) {
-
 			a = sc.nextInt();
 			b = sc.nextInt();
-			if(a==0&&b==0) {
-				break;
-			}
 			System.out.println(a + b);
 		}
 	}
