@@ -1,19 +1,20 @@
 package com.bronze.s1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Q10951_2 {
 	
 	public static void main(String[] args) {	
 		
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-		while(scan.hasNextInt()){
-			int A = scan.nextInt();
-			int B = scan.nextInt();
+		while(sc.hasNextLine()){
+			String [] A = sc.nextLine().split(" ");
+			int result = Integer.parseInt(A[0])+Integer.parseInt(A[1]);			
+			System.out.println(result);
 			
-			System.out.println(A+B);
-		};
-			
+		}
+		sc.nextLine();	
 	}
 }

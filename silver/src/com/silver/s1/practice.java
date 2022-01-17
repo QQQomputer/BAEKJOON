@@ -5,25 +5,13 @@ import java.util.Scanner;
 public class practice {
 
 	public static void main(String[] args) {
-		
-//		String str = "123456789";
-//		System.out.println(str.substring(0, 4));
-//		str = "push 123";
-//		System.out.println(str.substring(5));
-//		System.out.println(str.length());
-//		
-//		int input = 10;
-//		int [] room = new int[input];		
-//		System.out.println(room.length);
-		Scanner sc = new Scanner(System.in);
-		int input = Integer.parseInt(sc.nextLine());
-		int [] a = new int[input];
-
-		for(int i=0;i<a.length;i++) {
-			String str = sc.next();
-			System.out.println(i);
-		}
-		
+		StringBuilder sb = new StringBuilder();
+		 int [] room = new int[2];
+		 room[0]=1;
+		 room[1]=2;
+		sb.append(room[0]).append("\n").append("\n")
+		sb.append(room[1]).append("\n");
+		System.out.println(sb);
 		
 		
 	}

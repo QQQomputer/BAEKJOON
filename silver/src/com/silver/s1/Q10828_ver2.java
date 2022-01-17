@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class Q10828_ver2 {
 
 	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in); // ¼±¾ð
+		Scanner sc = new Scanner(System.in);  
 		int idx =0;
 		int input = Integer.parseInt(sc.nextLine());
 		//int input = sc.nextInt();
 		int [] room = new int[input];
+		//int i=0;
+		//while(sc.hasNextLine()) {
 		for(int i=0;i<room.length;i++) {
+
 			String str= sc.nextLine().trim();
 		
 			if(str.equals("pop")) {//=================================
@@ -41,7 +44,12 @@ public class Q10828_ver2 {
 				room[idx]=a;
 				idx++;
 			}
-		}		
+//			i++;
+//			if(i>=room.length) {
+//				break;
+//			}
+		}
+
 	}	
 }
 
