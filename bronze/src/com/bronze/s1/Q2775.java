@@ -38,7 +38,5 @@ public class Q2775 {
 		}
 		bw.flush();
 		bw.close();		
-
 	}
-
 }
