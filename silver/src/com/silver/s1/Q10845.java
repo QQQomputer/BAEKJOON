@@ -11,7 +11,6 @@ public class Q10845 {
 	public static void main(String[] args) throws IOException{
 					
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringBuilder sb = new StringBuilder();
 		
 		int count = Integer.parseInt(br.readLine());
@@ -21,18 +20,17 @@ public class Q10845 {
 		for(int i = 0; i<count;i++) {
 			String str = br.readLine();
 			if(str.length()>=6) {//============================================				
-				room[i]=Integer.parseInt(str.substring(5));
-//				System.out.println(room[i]+"@hi");
+				room[idx]=Integer.parseInt(str.substring(5));
 				idx++;
 			}else if(str.equals("pop")) {//============================================	
 				if(idx==data) {
 					sb.append("-1\n");
 				}else{
-					 sb.append(room[data]+"\n");
+					 sb.append(room[data]).append("\n");
 					 data++;					 
 				}
 			}else if(str.equals("size")) {	//============================================				
-				sb.append((idx-data)+"\n");			
+				sb.append((idx-data)).append("\n");			
 			}else if(str.equals("empty")) {//============================================	
 				if(idx==data) {
 					sb.append("1\n");
@@ -43,24 +41,17 @@ public class Q10845 {
 				if(idx==data) {
 					sb.append("-1\n");
 				}else {
-//					System.out.println(data+"##front");
-					sb.append(room[data]+"\n");
+					sb.append(room[data]).append("\n");
 				}								
 			}else if(str.equals("back")) {//============================================	
 				if(idx==data) {
 					sb.append("-1\n");
 				}else {
-					sb.append(room[idx-1]+"\n");
+					sb.append(room[idx-1]).append("\n");
 				}	
 			}
 		}
-
-//		System.out.println("============="+idx);
-//		System.out.println("============="+data);
 		System.out.println(sb);
-//		bw.write(sb);
-//		bw.flush();
-//		bw.close();
 	}	
 	
 	
