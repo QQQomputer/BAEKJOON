@@ -11,7 +11,7 @@ public class Q9020_ver2 {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-				
+		
 		int n = Integer.parseInt(br.readLine());
 		int gb = 0;		
 		boolean [] prime =new boolean[10001];
